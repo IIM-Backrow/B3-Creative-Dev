@@ -1,0 +1,117 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Valorant";
+  src: url("/fonts/valorant.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* DinNextW1G Font Family */
+@font-face {
+  font-family: "DinNextW1G";
+  src: url("/fonts/body/dinnextw1g_ultralight.otf") format("opentype");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "DinNextW1G";
+  src: url("/fonts/body/dinnextw1g_ultralightitalic.otf") format("opentype");
+  font-weight: 100;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "DinNextW1G";
+  src: url("/fonts/body/dinnextw1g_light.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "DinNextW1G";
+  src: url("/fonts/body/dinnextw1g_lightitalic.otf") format("opentype");
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "DinNextW1G";
+  src: url("/fonts/body/dinnextw1g.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "DinNextW1G";
+  src: url("/fonts/body/dinnextw1g_italic.otf") format("opentype");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "DinNextW1G";
+  src: url("/fonts/body/dinnextw1g_medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "DinNextW1G";
+  src: url("/fonts/body/dinnextw1g_mediumitalic.otf") format("opentype");
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "DinNextW1G";
+  src: url("/fonts/body/dinnextw1g_bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "DinNextW1G";
+  src: url("/fonts/body/dinnextw1g_bolditalic.otf") format("opentype");
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "DinNextW1G";
+  src: url("/fonts/body/dinnextw1g_heavy.otf") format("opentype");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "DinNextW1G";
+  src: url("/fonts/body/dinnextw1g_heavyitalic.otf") format("opentype");
+  font-weight: 800;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "DinNextW1G";
+  src: url("/fonts/body/dinnextw1g_black.otf") format("opentype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "DinNextW1G";
+  src: url("/fonts/body/dinnextw1g_blackitalic.otf") format("opentype");
+  font-weight: 900;
+  font-style: italic;
+}
+
+body,
+#root {
+  @apply w-full flex flex-col min-h-screen bg-black text-white;
+  font-family: "DinNextW1G", sans-serif;
+}
+
+h1 {
+  font-family: "Valorant", sans-serif;
+}
