@@ -1,6 +1,6 @@
 import { useMemo } from "react";
 
-interface DistoryOverlayProps {
+interface DistortOverlayProps {
   width: number;
   height: number;
   distortRects: {
@@ -14,12 +14,12 @@ interface DistoryOverlayProps {
   children: React.ReactNode;
 }
 
-export default function DistoryOverlay({
+export default function DistortOverlay({
   width,
   height,
   distortRects,
   children,
-}: DistoryOverlayProps) {
+}: DistortOverlayProps) {
   const filterId = useMemo(
     () => `distort-${Math.random().toString(36).substr(2, 9)}`,
     []
