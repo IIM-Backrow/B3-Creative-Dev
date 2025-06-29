@@ -1,0 +1,29 @@
+.path {
+  stroke-dasharray: 4000;
+  animation: dash 8s linear infinite;
+}
+
+@keyframes dash {
+  0% {
+    stroke-dashoffset: 4000;
+  }
+  25% {
+    stroke-dashoffset: 0;
+  }
+  75% {
+    stroke-dashoffset: 0;
+  }
+  to{
+    stroke-dashoffset: 4000;
+  }
+}
+
+@font-face {
+    font-family: 'Gemina';
+    src: url('/fonts/gemina.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Nemesys';
+    src: url('/fonts/NEMESYS-Regular.ttf') format('truetype');
+}
