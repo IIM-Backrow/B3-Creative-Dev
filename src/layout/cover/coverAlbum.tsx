@@ -1,7 +1,7 @@
 import './cover.css'
 import img from '/agent.png'
 
-export default function Cover() {
+export default function CoverAlbum() {
   return (
     <div className="aspect-square w-full max-w-xl relative" style={{ background: 'linear-gradient(to bottom, #1f193c 0%, #010101 50%, #1f193c 100%)' }}>
       <canvas
