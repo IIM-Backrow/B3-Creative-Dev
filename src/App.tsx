@@ -2,6 +2,8 @@ import { ChevronDown } from "lucide-react";
 import GlitchFadeIn from "./components/bits/glitch-text/glitch-fade-in";
 import ShinyText from "./components/bits/shiny-text/shiny-text";
 import Cover from "./layout/cover/cover";
+import CoverAlbum from "./layout/cover/coverAlbum";
+
 import Footer from "./layout/footer/footer";
 
 export default function App() {
@@ -25,6 +27,8 @@ export default function App() {
       </div>
 
       <Cover />
+
+      <CoverAlbum />
 
       <Footer />
     </main>
