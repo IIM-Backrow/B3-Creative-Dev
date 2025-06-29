@@ -16,50 +16,27 @@ export default function CoverAlbum() {
 
           // Load font once
           document.fonts.load('16px Nemesys').then(() => {
-            const texts = [
-              { text: 'REVES', size: '110px', y: 80, fill: '#584293', stroke: false },
-              { text: 'DHIER', size: '130px', y: 180, fill: 'transparent', stroke: true },
-              { text: 'REVES', size: '110px', y: 280, fill: 'transparent', stroke: true },
-              { text: 'DHIER', size: '130px', y: 400, fill: 'transparent', stroke: true },
-              { text: 'REVES', size: '110px', y: 500, fill: 'transparent', stroke: true },
-              { text: 'DHIER', size: '130px', y: 600, fill: '#584293', stroke: false }
-            ];
+          const texts = [
+            { text: 'REVES', size: '110px', y: 80, fill: '#584293', stroke: false },
+            { text: 'DHIER', size: '130px', y: 180, fill: 'transparent', stroke: true },
+            { text: 'REVES', size: '110px', y: 280, fill: 'transparent', stroke: true },
+            { text: 'DHIER', size: '130px', y: 400, fill: 'transparent', stroke: true },
+            { text: 'REVES', size: '110px', y: 500, fill: 'transparent', stroke: true },
+            { text: 'DHIER', size: '130px', y: 600, fill: '#584293', stroke: false }
+          ];
 
-            // Function to draw a single letter
-            const drawLetter = (textConfig, letterIndex, charIndex) => {
-              const { text, size, y, fill, stroke } = textConfig;
-              const letter = text[letterIndex];
-              
-              ctx.font = `${size} Nemesys`;
-              ctx.fillStyle = fill;
-              
-              // Calculate position for the letter
-              ctx.textAlign = 'left';
-              const metrics = ctx.measureText(text.substring(0, letterIndex));
-              const x = metrics.width;
-              
-              if (stroke) {
-                ctx.strokeStyle = '#584293';
-                ctx.lineWidth = 2;
-                ctx.strokeText(letter, x, y);
-              }
-              
-              ctx.fillText(letter, x, y);
-              
-              // Continue animation if there are more letters
-              if (letterIndex < text.length - 1) {
-                setTimeout(() => drawLetter(textConfig, letterIndex + 1, charIndex), 100);
-              } else if (charIndex < texts.length - 1) {
-                // Move to the next word after a pause
-                setTimeout(() => drawLetter(texts[charIndex + 1], 0, charIndex + 1), 300);
-              }
-            };
+          texts.forEach(({ text, size, y, fill, stroke }) => {
+            ctx.font = `${size} Nemesys`;
+            ctx.fillStyle = fill;
 
-            // Clear the canvas first
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            
-            // Start the animation with the first letter of the first word
-            setTimeout(() => drawLetter(texts[0], 0, 0), 200);
+            if (stroke) {
+            ctx.strokeStyle = '#584293';
+            ctx.lineWidth = 2;
+            ctx.strokeText(text, 0, y);
+            }
+
+            ctx.fillText(text, 0, y);
+          });
           });
           
         }
